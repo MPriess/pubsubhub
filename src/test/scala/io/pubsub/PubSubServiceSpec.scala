@@ -5,6 +5,7 @@ import spray.routing.HttpService
 import org.specs2.mutable.Specification
 
 object PubSubServiceSpec extends Specification with Specs2RouteTest with PubSubService {
+  def actorRefFactory = system
     
   "The DemoService" should {
 

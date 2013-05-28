@@ -5,7 +5,7 @@ import spray.routing.SimpleRoutingApp
 import spray.can.server.HttpServer
 import akka.actor.Actor
 
-trait PubSubService extends Directives {
+trait PubSubService extends HttpService {
   
   val pubsub = {
     path("") {
