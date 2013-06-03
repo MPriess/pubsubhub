@@ -21,7 +21,7 @@ trait PubSubService extends HttpService {
           complete {
             <h1>You wanna subscribe?</h1>
           }
-        }
+        } ~
         post {
           // form extraction from multipart or www-url-encoded forms
           formFields("hub.callback",

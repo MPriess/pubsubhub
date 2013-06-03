@@ -1,9 +1,11 @@
 package io.pubsub.domain
 
 case class Subscribe(callback: String,
-                     mode: String,
-                     topic: String,
-                     verify: String,
-                     leaseSeconds: String,
-                     secret: String,
-                     verifyToken: String)
+  mode: String,
+  topic: String,
+  verify: String,
+  leaseSeconds: String,
+  secret: String,
+  verifyToken: String) {
+  override def toString() = "subscribe"
+}
