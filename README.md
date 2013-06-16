@@ -3,8 +3,6 @@ pubsub
 
 Scala implementation of the PubSubHubbub Core 0.3 -- Working Draft
 
-See 
-
 Contribution policy
 ======
 
