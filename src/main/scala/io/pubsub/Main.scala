@@ -1,9 +1,13 @@
 package io.pubsub
 
-import spray.can.server.SprayCanHttpServerApp
-import akka.actor.Props
+import akka.io.IO
+import spray.can.Http
+import akka.actor.{ActorSystem, Props}
 
-object Main extends App with SprayCanHttpServerApp {
-  val handler = system.actorOf(Props[PubSubActor])
-  newHttpServer(handler) ! Bind(interface = "localhost", port = 8080)
+object Main extends App {
+  implicit val system = ActorSystem()
+  
+  val handler = system.actorOf(Props(new PubSubActor), name = "handler")
+  
+  IO(Http) ! Http.Bind(handler, interface = "localhost", port = 8080)
 }

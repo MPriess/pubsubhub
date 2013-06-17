@@ -2,7 +2,6 @@ package io.pubsub
 
 import spray.routing._
 import spray.routing.SimpleRoutingApp
-import spray.can.server.HttpServer
 import akka.actor.Actor
 import io.pubsub.domain.Subscribe
 
