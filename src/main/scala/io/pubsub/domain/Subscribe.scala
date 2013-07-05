@@ -4,8 +4,8 @@ case class Subscribe(callback: String,
   mode: String,
   topic: String,
   verify: String,
-  leaseSeconds: String,
+  leaseSeconds: Int,
   secret: String,
   verifyToken: String) {
-  override def toString() = "subscribe"
+  override def toString() = "subscribe " + leaseSeconds;
 }

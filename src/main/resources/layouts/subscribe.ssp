@@ -1,0 +1,50 @@
+
+<html>
+<head>
+  <title>Hub - Subscription</title>
+</head>
+<body>
+
+<h1>Subscribe/Unsubscribe</h1>
+
+Create a new subscription.
+<form action="/subscribe" method="post" accept-charset="utf-8">
+  <p>
+    <label for="callback">Callback: <em>(the subscriber URL)</em></label>
+    <input type="text" name="hub.callback" value="" id="callback">
+  </p>
+  <p>
+    <label for="topic">Topic: <em>(the feed URL)</em></label>
+    <input type="text" name="hub.topic" value="" id="topic">
+  </p>
+  <p>
+    <label for="verify">Verify type:</label>
+    <select name="hub.verify" id="async">
+      <option value="sync" selected="selected">Synchronous</option>
+      <option value="async">Asynchronous</option>
+    </select>
+  </p>
+  <p>
+    <label for="mode">Mode:</label>
+    <select name="hub.mode" id="mode">
+      <option value="subscribe" selected="selected">Subscribe</option>
+      <option value="unsubscribe">Unsubscribe</option>
+    </select>
+  </p>
+  <p>
+    <label for="verify_token">Verify token:</label>
+    <input type="text" name="hub.verify_token" id="verify_token" value="">
+  </p>
+  <p>
+    <label for="secret">HMAC secret: <em>(optional)</em></label>
+    <input type="text" name="hub.secret" id="secret" value="">
+  </p>
+  <p>
+    <label for="lease_seconds">Lease seconds:</label>
+    <input type="text" name="hub.lease_seconds" id="lease_seconds" value="">
+  </p>
+  <p><input type="submit" value="Do it"></p>
+</form>
+<em>Note: submission will result in a HTTP 204 response to acknowledge; in browsers this looks like a no-op</em>
+</body>
+</html>

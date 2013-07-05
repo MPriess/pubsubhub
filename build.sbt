@@ -15,6 +15,7 @@ libraryDependencies ++= Seq(
   "io.spray"            %   "spray-routing" % "1.1-M8",
   "io.spray"            %   "spray-testkit" % "1.1-M8",
   "io.spray"            %   "spray-caching" % "1.1-M8",
+  "org.fusesource.scalate" % "scalate-core_2.10" % "1.6.1",
   "com.typesafe.akka" %%  "akka-actor" % "2.1.2",
   "com.typesafe.akka" %%  "akka-slf4j" % "2.1.2",
   "ch.qos.logback"% "logback-classic" % "1.0.12" % "runtime",
