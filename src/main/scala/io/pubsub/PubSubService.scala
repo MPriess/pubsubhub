@@ -13,8 +13,6 @@ import spray.http.MediaTypes._
 
 trait PubSubService extends HttpService  {
   
-  
-  
   val templateEngine = new TemplateEngine
 
   val pubsub = {

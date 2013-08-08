@@ -18,8 +18,11 @@ libraryDependencies ++= Seq(
   "org.fusesource.scalate" % "scalate-core_2.10" % "1.6.1",
   "com.typesafe.akka" %%  "akka-actor" % "2.1.2",
   "com.typesafe.akka" %%  "akka-slf4j" % "2.1.2",
+  "com.typesafe.slick" %% "slick" % "1.0.1",
+  "org.slf4j" % "slf4j-nop" % "1.6.4",
+  "com.h2database" % "h2" % "1.3.166",
   "ch.qos.logback"% "logback-classic" % "1.0.12" % "runtime",
-  "org.specs2"          %%  "specs2"        % "1.14" % "test"
+  "org.specs2" %%  "specs2" % "1.14" % "test"
 )
 
 EclipseKeys.withSource := true
