@@ -25,5 +25,5 @@ object Subscriber extends Table[(Int, Int, String)]("subscriber") {
     // Every table needs a * projection with the same type as the table's type parameter
     def * = id ~ pubId ~ callback
     
-    def publisher = foreignKey("publisher_fk", pubId, Publisher)(_.id)
+    def publisher = foreignKey("publisher_", pubId, Publisher)(_.id)
 }

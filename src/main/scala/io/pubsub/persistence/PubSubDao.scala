@@ -9,7 +9,7 @@ import io.pubsub.domain.Subscriber
 import io.pubsub.domain.Publish
 import scala.slick.jdbc.meta.MTable
 
-class PublisherDao {
+class PubSubDao {
 
   private val db = Database.forURL("jdbc:h2:mem:test1;DB_CLOSE_DELAY=-1", driver = "org.h2.Driver");
 

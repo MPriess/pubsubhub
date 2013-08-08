@@ -12,14 +12,8 @@ import spray.http.StatusCodes
 
 object PubSubServiceSpec extends Specification with Specs2RouteTest with PubSubService {
   def actorRefFactory = system
-
-    "A POST request to the subscribe path" in {
-      val body = HttpEntity.apply(`application/x-www-form-urlencoded`, "hub.callback=foo&hub.mode=subscribe&hub.topic=foo&hub.verify=sync")
-      
-      Post("/subscribe").withEntity(body) ~> pubsub ~> check { status mustEqual StatusCodes.NoContent }
-    }
     
-    "A POST request to the subscribe path which must be verified" in {
+    "A POST request to the subscribe path" in {
       val body = HttpEntity.apply(`application/x-www-form-urlencoded`, "hub.callback=foo&hub.mode=subscribe&hub.topic=foo&hub.verify=async")
       
       Post("/subscribe").withEntity(body) ~> pubsub ~> check { status mustEqual StatusCodes.Accepted }
