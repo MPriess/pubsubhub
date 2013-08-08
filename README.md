@@ -1,4 +1,4 @@
-pubsub
+pubsubhub
 ======
 
 Scala implementation of the PubSubHubbub Core 0.4 -- Working Draft
